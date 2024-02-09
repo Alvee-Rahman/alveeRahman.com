@@ -26,23 +26,12 @@ export default function Aboutpage() {
     <Allskills key="allskills" />,
   ];
   const AllButtonClick = (index) => {
-    const prevButton = document.getElementById(`button-${activeIndex}`);
-    if (prevButton) {
-      prevButton.classList.remove("bg-orange-700");
-    }
-    const currentButton = document.getElementById(`button-${index}`);
-    if (currentButton) {
-      currentButton.focus();
-      currentButton.classList.add("bg-orange-700");
-    }
-
     setActiveIndex(index);
   };
 
   useEffect(() => {
     const allSkillsButton = document.getElementById("button-4");
     if (allSkillsButton) {
-      allSkillsButton.focus();
       allSkillsButton.classList.add("bg-orange-700");
     }
   }, []);
@@ -69,16 +58,14 @@ export default function Aboutpage() {
                   />
                 </span>
 
-                <h3 className="uppercase pt-10">
+                <h3 className="uppercase pt-10 text-[1rem] font-semibold">
                   Bsc in Computer Science and Engineering -
-                  <span>Aiub,Dhaka</span>
+                  <span className="text-zinc-600">Aiub,Dhaka</span>
                 </h3>
-                <span>(2019-2023)</span>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-                  rerum autem eum magni, quisquam tempora quis quidem nesciunt,
-                  beatae corporis possimus nostrum commodi harum minus amet
-                  necessitatibus obcaecati. Assumenda, nihil.
+                <span className="text-orange-500">(2019-2023)</span>
+                <p className="text-gray-400">
+                  with a very good result, I've completed my bachelor degree on
+                  civil engineering from this university.
                 </p>
               </li>
               <li>
@@ -88,15 +75,13 @@ export default function Aboutpage() {
                     className="absolute -left-7 p-2 justify-center flex bg-blue-900 border-[10px] border-zinc-900 shadow-2xl shadow-zinc-500 rounded-full"
                   />
                 </span>
-                <h3 className="uppercase pt-10">
-                  higher secondary certificate -<span>Gmmsc college,dhaka</span>
+                <h3 className="uppercase pt-10 text-[1rem] font-semibold">
+                  higher secondary certificate -
+                  <span className="text-zinc-600">Gmmsc college,dhaka</span>
                 </h3>
-                <span>(2017-2019)</span>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Sapiente atque numquam, quo dicta fuga dolor aliquid est
-                  animi? Nostrum quia saepe ducimus molestiae repellendus,
-                  architecto voluptates officiis eaque soluta expedita.
+                <span className="text-orange-500">(2017-2019)</span>
+                <p className="text-gray-400">
+                  I've successfully earned a HSC Degree with 4.50 CGPA out of 5.
                 </p>
               </li>
               <li>
@@ -106,15 +91,14 @@ export default function Aboutpage() {
                     className="absolute -left-7 p-2 justify-center flex bg-blue-900 border-[10px] border-zinc-900 shadow-2xl shadow-zinc-500 rounded-full"
                   />
                 </span>
-                <h3 className="uppercase pt-10">
+                <h3 className="uppercase pt-10 text-[1rem] font-semibold">
                   secondary school certificate-
-                  <span>Dhanmondi Govt boys high school dhaka</span>
+                  <span className="text-zinc-600">DGBHS dhaka</span>
                 </h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Commodi, ea? Earum eveniet, quo, quibusdam doloribus soluta
-                  illo ut quaerat delectus iure saepe maxime amet similique
-                  laborum voluptatum? Facere, ullam eaque.
+                <span className="text-orange-500">2017</span>
+                <p className="text-gray-400">
+                  I've completed my school education from Science department
+                  from this school.
                 </p>
               </li>
             </ol>
@@ -129,7 +113,7 @@ export default function Aboutpage() {
                   icon={faLightbulb}
                   className="text-[20px] absolute -left-6 p-2 justify-center flex bg-blue-900 border-[10px] border-zinc-900 shadow-2xl shadow-zinc-500 rounded-full"
                 />
-                <p className="pt-10">
+                <p className="pt-10 blue-900">
                   Currently I have no industrial experience . But i egarly
                   motivate myself for an internship
                 </p>
@@ -188,21 +172,27 @@ export default function Aboutpage() {
 
           <button
             id="button-0"
-            className="text-white bg-zinc-800 px-[40px] py-[10px] text-center text-[20px]  font-bold"
+            className={`text-white  px-[40px] py-[10px] text-center text-[20px] font-bold ${
+              activeIndex === 0 ? "bg-orange-700" : "bg-zinc-800"
+            }`}
             onClick={() => AllButtonClick(0)}
           >
             Frontend
           </button>
           <button
             id="button-1"
-            className="text-white bg-zinc-800 px-[40px] py-[10px] text-center text-[20px]  font-bold"
+            className={`text-white  px-[40px] py-[10px] text-center text-[20px] font-bold ${
+              activeIndex === 1 ? "bg-orange-700" : "bg-zinc-800"
+            }`}
             onClick={() => AllButtonClick(1)}
           >
             Backend
           </button>
           <button
             id="button-2"
-            className="text-white bg-zinc-800 px-[40px] py-[10px] text-center text-[20px]  font-bold"
+            className={`text-white  px-[40px] py-[10px] text-center text-[20px] font-bold ${
+              activeIndex === 2 ? "bg-orange-700" : "bg-zinc-800"
+            }`}
             onClick={() => AllButtonClick(2)}
           >
             Fullstack
@@ -210,14 +200,18 @@ export default function Aboutpage() {
           <button
             id="button-3"
             onClick={() => AllButtonClick(3)}
-            className="text-white bg-zinc-800 px-[40px] py-[10px] text-center text-[20px]  font-bold"
+            className={`text-white  px-[40px] py-[10px] text-center text-[20px] font-bold ${
+              activeIndex === 3 ? "bg-orange-700" : "bg-zinc-800"
+            }`}
           >
             Tools
           </button>
 
           <button
             id="button-4"
-            className="text-white bg-zinc-800 px-[40px] py-[10px] text-center text-[20px] font-bold"
+            className={`text-white  px-[40px] py-[10px] text-center text-[20px] font-bold ${
+              activeIndex === 4 ? "bg-orange-700" : "bg-zinc-800"
+            }`}
             onClick={() => AllButtonClick(4)}
           >
             All Skills
