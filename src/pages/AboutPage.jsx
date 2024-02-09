@@ -35,10 +35,9 @@ export default function Aboutpage() {
       currentButton.focus();
       currentButton.classList.add("bg-orange-700");
     }
-  
+
     setActiveIndex(index);
   };
-  
 
   useEffect(() => {
     const allSkillsButton = document.getElementById("button-4");
@@ -159,12 +158,11 @@ export default function Aboutpage() {
               </li>
               <li className="">
                 <Link to="/contact">
-                <FontAwesomeIcon
-                  icon={faAddressBook}
-                  className="text-[1.5rem] h-6 w-6  rounded-full p-3 bg-zinc-800"
-                />
+                  <FontAwesomeIcon
+                    icon={faAddressBook}
+                    className="text-[1.5rem] h-6 w-6  rounded-full p-3 bg-zinc-800"
+                  />
                 </Link>
-               
               </li>
               <li className="">
                 <FontAwesomeIcon
@@ -219,7 +217,7 @@ export default function Aboutpage() {
 
           <button
             id="button-4"
-            className="text-white bg-zinc-800 px-[40px] py-[10px] text-center text-[20px] font-bold  focus:bg-orange-700"
+            className="text-white bg-zinc-800 px-[40px] py-[10px] text-center text-[20px] font-bold"
             onClick={() => AllButtonClick(4)}
           >
             All Skills

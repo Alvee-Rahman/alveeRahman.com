@@ -19,32 +19,51 @@ export default function ContactPage() {
           <div className=" col-span-11 ">
             <div className="grid grid-cols-12">
               <div className="col-span-6 pl-[100px] self-center">
-                <h3 className="text-[1.5rem] font-bold text-orange-700">NEVER HESITATE, PLEASE!</h3>
-                <p>
+                <h3 className="text-[1.5rem] font-bold text-orange-700">
+                  NEVER HESITATE, PLEASE!
+                </h3>
+                <p className="pt-3">
                   Feel free to get in touch with me. I'm always open to
                   discussing new projects or opportunities to be part of your
                   visions.
                 </p>
-                <p>I am free to be hired today !</p>
+                <p className="pt-3 text-orange-700">
+                  I am free to be hired today !
+                </p>
               </div>
-              <div>
-                <div>
-                  <form className="flex">
-                    <input type="text" placeholder="your name" />
+              <form action="" className="min-w-fit ">
+                <div className="flex  space-x-10">
+                  <input
+                    type="text"
+                    placeholder="your name"
+                    className=" w-[240px] p-[10px] rounded bg-zinc-900"
+                  />
+                  <input
+                    type="text"
+                    placeholder="your email"
+                    className=" w-[240px] p-[10px] rounded  bg-zinc-900"
+                  />
+                </div>
 
-                    <input type="text" placeholder="your email" />
-                  </form>
+                <div className="my-[30px]">
+                  <input
+                    type="text"
+                    placeholder="subject"
+                    className="w-[520px] p-[10px] rounded  bg-zinc-900"
+                  />
                 </div>
-                <div>
-                  <form>
-                    <input type="text" placeholder="subject" />
-                    <textarea name="" id="" cols="30" rows="10">your meeage</textarea>
-                  </form>
-                </div>
-                <div>
-                  <button>send message</button>
-                </div>
-              </div>
+
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Write here"
+                  className="w-[520px] p-[10px] rounded  bg-zinc-900"
+                ></textarea>
+
+                <button type="Submit" className="bg-orange-600 px-[30px] py-1 text-[1.3rem] font-bold rounded mt-4">Send</button>
+              </form>
             </div>
           </div>
 
