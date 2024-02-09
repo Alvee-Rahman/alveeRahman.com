@@ -18,7 +18,7 @@ export default function ContactPage() {
         <div className=" grid grid-cols-12">
           <div className=" col-span-11 ">
             <div className="grid grid-cols-12">
-              <div className="col-span-6 pl-[100px] self-center">
+              <div className="col-span-6 pl-[100px] ">
                 <h3 className="text-[1.5rem] font-bold text-orange-700">
                   NEVER HESITATE, PLEASE!
                 </h3>
