@@ -76,10 +76,12 @@ export default function Home() {
               </Link>
             </li>
             <li className="">
-              <FontAwesomeIcon
-                icon={faBriefcase}
-                className="text-[1.5rem] h-6 w-6  rounded-full p-3 bg-zinc-800"
-              />
+              <Link to="project">
+                <FontAwesomeIcon
+                  icon={faBriefcase}
+                  className="text-[1.5rem] h-6 w-6  rounded-full p-3 bg-zinc-800"
+                />
+              </Link>
             </li>
           </ul>
         </div>

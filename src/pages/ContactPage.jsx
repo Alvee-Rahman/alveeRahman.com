@@ -62,7 +62,12 @@ export default function ContactPage() {
                   className="w-[520px] p-[10px] rounded  bg-zinc-900"
                 ></textarea>
 
-                <button type="Submit" className="bg-orange-600 px-[30px] py-1 text-[1.3rem] font-bold rounded mt-4">Send</button>
+                <button
+                  type="Submit"
+                  className="bg-orange-600 px-[30px] py-1 text-[1.3rem] font-bold rounded mt-4"
+                >
+                  Send
+                </button>
               </form>
             </div>
           </div>
@@ -96,10 +101,12 @@ export default function ContactPage() {
                 </Link>
               </li>
               <li className="">
-                <FontAwesomeIcon
-                  icon={faBriefcase}
-                  className="text-[1.5rem] h-6 w-6  rounded-full p-3 bg-zinc-800"
-                />
+                <Link to="/project">
+                  <FontAwesomeIcon
+                    icon={faBriefcase}
+                    className="text-[1.5rem] h-6 w-6  rounded-full p-3 bg-zinc-800"
+                  />
+                </Link>
               </li>
             </ul>
           </div>

@@ -5,6 +5,7 @@ import Home from "./pages/Home.jsx";
 import Aboutpage from "./pages/Aboutpage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ContactPage from "./pages/ContactPage.jsx";
+import Project from "./pages/Project.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "contact",
     element: <ContactPage />,
+  },
+  {
+    path: "project",
+    element: <Project/>,
   },
 ]);
 
