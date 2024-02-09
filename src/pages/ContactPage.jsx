@@ -6,6 +6,9 @@ import {
   faUser,
   faAddressBook,
   faBriefcase,
+  faEnvelope,
+  faPhoneVolume,
+  faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function ContactPage() {
@@ -27,9 +30,46 @@ export default function ContactPage() {
                   discussing new projects or opportunities to be part of your
                   visions.
                 </p>
-                <p className="pt-3 text-orange-700">
+                <p className="pt-3 text-orange-600 font-semibold">
                   I am free to be hired today !
                 </p>
+                <div>
+                  <ul className="space-y-5">
+                    <li></li>
+                    <li className="flex space-x-2 ">
+                      <FontAwesomeIcon
+                        icon={faEnvelope}
+                        className="text-orange-600 text-[30px] p-4 bg-zinc-800 rounded"
+                      />
+                      <div className=" text-zinc-600 font-bold">
+                        <p>MAIL ME</p>
+                        <p className="text-orange-600">
+                          alveerahman47@gmail.com
+                        </p>
+                      </div>
+                    </li>
+                    <li className="flex space-x-2 ">
+                      <FontAwesomeIcon
+                        icon={faPhoneVolume}
+                        className="text-orange-600 text-[30px] p-4 bg-zinc-800 rounded"
+                      />
+                      <div className=" text-zinc-600 font-bold">
+                        <p> PHONE NUMBER</p>
+                        <p className="text-orange-600">+8801300773448</p>
+                      </div>
+                    </li>
+                    <li className="flex space-x-2 ">
+                      <FontAwesomeIcon
+                        icon={faLocationDot}
+                        className="text-orange-600 text-[30px] p-5 bg-zinc-800 rounded"
+                      />
+                      <div className=" text-zinc-600 font-bold">
+                        <p>Current Location</p>
+                        <p className="text-orange-600">Dhaka,Bangladsh</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <form action="" className="min-w-fit ">
                 <div className="flex  space-x-10">

@@ -29,13 +29,6 @@ export default function Aboutpage() {
     setActiveIndex(index);
   };
 
-  useEffect(() => {
-    const allSkillsButton = document.getElementById("button-4");
-    if (allSkillsButton) {
-      allSkillsButton.classList.add("bg-orange-700");
-    }
-  }, []);
-
   return (
     <>
       <section className=" bg-black min-h-screen m-0 overflow-y-hidden ">
@@ -220,7 +213,7 @@ export default function Aboutpage() {
           </button>
         </div>
 
-        <div className="h-[300px]">{components[activeIndex]}</div>
+        <div className="h-[400px]">{components[activeIndex]}</div>
       </section>
     </>
   );
