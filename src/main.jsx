@@ -6,6 +6,7 @@ import Aboutpage from "./pages/Aboutpage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ContactPage from "./pages/ContactPage.jsx";
 import Project from "./pages/Project.jsx";
+import AdminPage from "./pages/AdminPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,12 @@ const router = createBrowserRouter([
   },
   {
     path: "project",
-    element: <Project/>,
+    element: <Project />,
+  },
+
+  {
+    path: "admin",
+    element: <AdminPage/>,
   },
 ]);
 
