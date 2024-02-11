@@ -29,11 +29,11 @@ export default function Home() {
           <div>
             <p className="text-[1.8rem] text-white">
               Hello! I'm
-              <span className="text-orange-500"> Alvee Rahman</span>
+              <span className="text-orange-500"> Alvee Rahman.</span>
             </p>
 
             <h1 className="text-[2.8rem] font-bold text-orange-500">
-              A junior Developer.
+              A Web Application Developer.
             </h1>
             <p className="leading-6 text-white">
               With 1+ years of self and academic knowledge in web development,
