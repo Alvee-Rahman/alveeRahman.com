@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Manageproject from "../Components/Manageproject";
 
 export default function AdminPage() {
+  const [activeindex, setActiveIndex] = useState();
+
+  const component = [<Manageproject />];
+
+  const mpButtonclick = (index) => {
+    setActiveIndex(index);
+  };
+
   return (
     <>
       <section className="min-h-screen bg-black">
@@ -12,7 +20,12 @@ export default function AdminPage() {
 
           <div>
             <ul className="text-white  space-x-10 pt-[20px] flex justify-center">
-              <li className="px-6 bg-zinc-800 text-[1rem] py-4 cursor-pointer">
+              <li
+                className={`px-6  text-[1rem] py-4 cursor-pointer  ${
+                  activeindex === 0 ? "bg-orange-600" : "bg-zinc-800"
+                }`}
+                onClick={() => mpButtonclick(0)}
+              >
                 Manage your project
               </li>
               <li className="px-6 bg-zinc-800 text-[1rem] py-4 cursor-pointer">
@@ -33,9 +46,7 @@ export default function AdminPage() {
             </ul>
           </div>
         </div>
-        <div>
-          <Manageproject />
-        </div>
+        <div>{component[activeindex]}</div>
       </section>
     </>
   );
