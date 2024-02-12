@@ -143,7 +143,7 @@ export default function Manageproject() {
               <a href="">
                 <FontAwesomeIcon
                   icon={faEye}
-                  className="text-orange-800 text-[1.5rem]"
+                  className="text-gray-500 text-[1.5rem]"
                 />
               </a>
             </div>
