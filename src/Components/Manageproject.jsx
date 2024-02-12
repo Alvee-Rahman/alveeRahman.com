@@ -62,6 +62,8 @@ export default function Manageproject() {
                     type="text"
                     placeholder="Add your project title here..."
                     className="  w-[300px] p-[10px]  rounded  bg-zinc-900 "
+                    name="title"
+                    value=""
                     required
                   />
 
@@ -70,6 +72,8 @@ export default function Manageproject() {
                     placeholder="Add a Note of your project..."
                     className=" w-[300px] p-[10px]  rounded   bg-zinc-900 "
                     required
+                    name="Note"
+                    value=""
                   />
                 </div>
                 <div className="flex gap-10">
@@ -78,23 +82,28 @@ export default function Manageproject() {
                     placeholder="Add your project git link..."
                     className=" w-[300px] p-[10px]  rounded  bg-zinc-900 "
                     required
+                    name="gitLink"
+                    value=""
                   />
                   <input
                     type="text"
                     placeholder="Add  project live link..."
                     className=" w-[300px] p-[10px]  rounded  bg-zinc-900 "
                     required
+                    name="liveLink"
                   />
                 </div>
               </div>
               <textarea
-                name=""
+                name="discription"
+                value=""
                 id=""
                 cols="30"
                 rows="10"
                 placeholder="Write a short description of your project..."
                 className="w-[640px] p-[10px] mt-8 rounded  bg-zinc-900"
                 required
+                
               ></textarea>
             </form>
           </div>
