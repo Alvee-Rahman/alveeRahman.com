@@ -10,7 +10,7 @@ export default function Manageproject() {
     discription: "",
   });
 
-  const handleInput = () => {
+  const handleInput = (e) => {
     const { name, value } = e.target;
     setProjectData({ ...projectData, [name]: value });
   };
@@ -44,7 +44,9 @@ export default function Manageproject() {
                     value="frontend"
                     className="text-red-500 focus:outline-none"
                     required
-                  />
+                    onChange={handleInput}
+
+                  /> 
                   <label htmlFor="frontend">Frontend</label>
                 </div>
                 <div>
@@ -54,6 +56,7 @@ export default function Manageproject() {
                     name="category"
                     value="backend"
                     required
+                    onChange={handleInput}
                   />
                   <label htmlFor="backend">Backend</label>
                 </div>
@@ -64,6 +67,7 @@ export default function Manageproject() {
                     name="category"
                     value="fullstack"
                     required
+                    onChange={handleInput}
                   />
                   <label htmlFor="fullstack">Fullstack</label>
                 </div>
@@ -78,6 +82,8 @@ export default function Manageproject() {
                     name="title"
                     value={projectData.title}
                     required
+                    onChange={handleInput}
+
                   />
 
                   <input
@@ -85,8 +91,10 @@ export default function Manageproject() {
                     placeholder="Add a Note of your project..."
                     className=" w-[300px] p-[10px]  rounded   bg-zinc-900 "
                     required
+                    onChange={handleInput}
                     name="Note"
                     value={projectData.Note}
+
                   />
                 </div>
                 <div className="flex gap-10">
@@ -95,16 +103,20 @@ export default function Manageproject() {
                     placeholder="Add your project git link..."
                     className=" w-[300px] p-[10px]  rounded  bg-zinc-900 "
                     required
+                    onChange={handleInput}
                     name="gitLink"
                     value={projectData.gitLink}
+
                   />
                   <input
                     type="text"
                     placeholder="Add  project live link..."
                     className=" w-[300px] p-[10px]  rounded  bg-zinc-900 "
                     required
+                    onChange={handleInput}
                     name="liveLink"
                     value={projectData.liveLink}
+
                   />
                 </div>
               </div>
@@ -117,6 +129,7 @@ export default function Manageproject() {
                 placeholder="Write a short description of your project..."
                 className="w-[640px] p-[10px] mt-8 rounded  bg-zinc-900"
                 required
+                onChange={handleInput}
               ></textarea>
             </form>
           </div>
