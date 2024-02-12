@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Project from "./Project";
 export default function Manageproject() {
+  const [projectData, setProjectData] = useState({
+    category: "",
+    title: "",
+    Note: "",
+    gitLink: "",
+    liveLink: "",
+    discription: "",
+  });
+
+  const handleInput = () => {
+    const { name, value } = e.target;
+    setProjectData({ ...projectData, [name]: value });
+  };
   return (
     <>
       <div className="grid grid-cols-2  text-white">
@@ -63,7 +76,7 @@ export default function Manageproject() {
                     placeholder="Add your project title here..."
                     className="  w-[300px] p-[10px]  rounded  bg-zinc-900 "
                     name="title"
-                    value=""
+                    value={projectData.title}
                     required
                   />
 
@@ -73,7 +86,7 @@ export default function Manageproject() {
                     className=" w-[300px] p-[10px]  rounded   bg-zinc-900 "
                     required
                     name="Note"
-                    value=""
+                    value={projectData.Note}
                   />
                 </div>
                 <div className="flex gap-10">
@@ -83,7 +96,7 @@ export default function Manageproject() {
                     className=" w-[300px] p-[10px]  rounded  bg-zinc-900 "
                     required
                     name="gitLink"
-                    value=""
+                    value={projectData.gitLink}
                   />
                   <input
                     type="text"
@@ -91,19 +104,19 @@ export default function Manageproject() {
                     className=" w-[300px] p-[10px]  rounded  bg-zinc-900 "
                     required
                     name="liveLink"
+                    value={projectData.liveLink}
                   />
                 </div>
               </div>
               <textarea
                 name="discription"
-                value=""
+                value={projectData.discription}
                 id=""
                 cols="30"
                 rows="10"
                 placeholder="Write a short description of your project..."
                 className="w-[640px] p-[10px] mt-8 rounded  bg-zinc-900"
                 required
-                
               ></textarea>
             </form>
           </div>
@@ -113,7 +126,7 @@ export default function Manageproject() {
             All your projects
           </h3>
           <div>
-            <Project/>
+            <Project />
           </div>
         </div>
       </div>
