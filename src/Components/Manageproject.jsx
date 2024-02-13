@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Project from "./Project";
 export default function Manageproject() {
+  const [projectDataList, setProjectDataList] = useState([]);
   const [projectData, setProjectData] = useState({
     category: "",
     title: "",
@@ -14,6 +15,22 @@ export default function Manageproject() {
     const { name, value } = e.target;
     setProjectData({ ...projectData, [name]: value });
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setProjectDataList((prevProjectDataList) => [
+      ...prevProjectDataList,
+      projectData,
+    ]);
+    setProjectData({
+      category: "",
+      title: "",
+      Note: "",
+      gitLink: "",
+      liveLink: "",
+      discription: "",
+    });
+  };
   return (
     <>
       <div className="grid grid-cols-2  text-white">
@@ -22,7 +39,7 @@ export default function Manageproject() {
             Add new project
           </h3>
           <div>
-            <form className="ml-[80px] mt-10 ">
+            <form className="ml-[80px] mt-10  " onSubmit={handleSubmit}>
               <div className="flex">
                 <p className="text-[1rem] uppercase font-bold">
                   Add categories
@@ -45,8 +62,7 @@ export default function Manageproject() {
                     className="text-red-500 focus:outline-none"
                     required
                     onChange={handleInput}
-
-                  /> 
+                  />
                   <label htmlFor="frontend">Frontend</label>
                 </div>
                 <div>
@@ -83,7 +99,6 @@ export default function Manageproject() {
                     value={projectData.title}
                     required
                     onChange={handleInput}
-
                   />
 
                   <input
@@ -94,7 +109,6 @@ export default function Manageproject() {
                     onChange={handleInput}
                     name="Note"
                     value={projectData.Note}
-
                   />
                 </div>
                 <div className="flex gap-10">
@@ -106,7 +120,6 @@ export default function Manageproject() {
                     onChange={handleInput}
                     name="gitLink"
                     value={projectData.gitLink}
-
                   />
                   <input
                     type="text"
@@ -116,7 +129,6 @@ export default function Manageproject() {
                     onChange={handleInput}
                     name="liveLink"
                     value={projectData.liveLink}
-
                   />
                 </div>
               </div>
@@ -138,8 +150,8 @@ export default function Manageproject() {
           <h3 className="text-[1.4rem] uppercase font-bold  py-[20px]  text-center">
             All your projects
           </h3>
-          <div>
-            <Project />
+          <div className="overflow-scroll max-h-[550px]">
+            <Project projectDataList={projectDataList} />
           </div>
         </div>
       </div>
