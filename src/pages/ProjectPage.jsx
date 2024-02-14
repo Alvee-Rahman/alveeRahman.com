@@ -7,12 +7,9 @@ import {
   faAddressBook,
   faBriefcase,
 } from "@fortawesome/free-solid-svg-icons";
-export default function Project() {
+export default function ProjectPage() {
   const [activeIndex, setActiveIndex] = useState(2);
 
-  // const components = [
-  //   1,2,3,4
-  // ];
   const AllButtonClick = (index) => {
     setActiveIndex(index);
   };
@@ -34,37 +31,37 @@ export default function Project() {
 
         <div className="grid grid-cols-12">
           <div className="col-span-11">
-          <div className="flex  mx-auto  mt-10 space-x-10 pl-[440px]">
-          <button></button>
+            <div className="flex  mx-auto  mt-10 space-x-10 pl-[440px]">
+              <button></button>
 
-          <button
-            id="button-0"
-            className={`text-white  px-[40px] py-[10px] text-center text-[20px] font-bold ${
-              activeIndex === 0 ? "bg-orange-700" : "bg-zinc-800"
-            }`}
-            onClick={() => AllButtonClick(0)}
-          >
-            Frontend
-          </button>
-          <button
-            id="button-1"
-            className={`text-white  px-[40px] py-[10px] text-center text-[20px] font-bold ${
-              activeIndex === 1 ? "bg-orange-700" : "bg-zinc-800"
-            }`}
-            onClick={() => AllButtonClick(1)}
-          >
-            Backend
-          </button>
-          <button
-            id="button-2"
-            className={`text-white  px-[40px] py-[10px] text-center text-[20px] font-bold ${
-              activeIndex === 2 ? "bg-orange-700" : "bg-zinc-800"
-            }`}
-            onClick={() => AllButtonClick(2)}
-          >
-            Fullstack
-          </button>
-        </div>
+              <button
+                id="button-0"
+                className={`text-white  px-[40px] py-[10px] text-center text-[20px] font-bold ${
+                  activeIndex === 0 ? "bg-orange-700" : "bg-zinc-800"
+                }`}
+                onClick={() => AllButtonClick(0)}
+              >
+                Frontend
+              </button>
+              <button
+                id="button-1"
+                className={`text-white  px-[40px] py-[10px] text-center text-[20px] font-bold ${
+                  activeIndex === 1 ? "bg-orange-700" : "bg-zinc-800"
+                }`}
+                onClick={() => AllButtonClick(1)}
+              >
+                Backend
+              </button>
+              <button
+                id="button-2"
+                className={`text-white  px-[40px] py-[10px] text-center text-[20px] font-bold ${
+                  activeIndex === 2 ? "bg-orange-700" : "bg-zinc-800"
+                }`}
+                onClick={() => AllButtonClick(2)}
+              >
+                Fullstack
+              </button>
+            </div>
           </div>
           <div className=" navbar text-white ">
             <ul className="space-y-5   fixed right-5 ">
@@ -105,6 +102,7 @@ export default function Project() {
             </ul>
           </div>
         </div>
+        <div></div>
       </section>
     </>
   );
