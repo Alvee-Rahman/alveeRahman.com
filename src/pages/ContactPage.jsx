@@ -120,7 +120,7 @@ export default function ContactPage() {
                 <Link to="/">
                   <FontAwesomeIcon
                     icon={faHouse}
-                    className="text-[1.5rem] h-6 w-6  rounded-full p-3 bg-zinc-800"
+                    className="text-[1.5rem] h-6 w-6  rounded-full border-white  bg-zinc-800"
                   />
                 </Link>
               </li>
